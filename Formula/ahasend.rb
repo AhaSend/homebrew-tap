@@ -5,13 +5,13 @@
 class Ahasend < Formula
   desc "Command-line interface for the AhaSend email API"
   homepage "https://ahasend.com"
-  version "0.4.0"
+  version "0.5.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.4.0/ahasend_0.4.0_darwin_amd64.tar.gz"
-      sha256 "a23f05d735d94ce497b4dc7636899193cdd9fad4fe64351cc00037f593531bda"
+      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.5.0/ahasend_0.5.0_darwin_amd64.tar.gz"
+      sha256 "5fbb269479128c2bef4038f1a06bc2df5bf04bd1d0d779aef73209b858b9d80b"
 
       define_method(:install) do
         bin.install "ahasend"
@@ -22,8 +22,8 @@ class Ahasend < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.4.0/ahasend_0.4.0_darwin_arm64.tar.gz"
-      sha256 "86ae8e8adf6061c7e72bdc8b494846eed3821800b8c1576a20c9450239417b9e"
+      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.5.0/ahasend_0.5.0_darwin_arm64.tar.gz"
+      sha256 "b64cc57772c539799c18b735cd5807ce1ff51ee195982e91aeaab656379edd72"
 
       define_method(:install) do
         bin.install "ahasend"
@@ -37,8 +37,8 @@ class Ahasend < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.4.0/ahasend_0.4.0_linux_amd64.tar.gz"
-      sha256 "4e8fc90901231f3d1892a0cc327dd771d2c6123903fc615632fc30a989a15a6c"
+      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.5.0/ahasend_0.5.0_linux_amd64.tar.gz"
+      sha256 "6bce837ebf9406ebdddccd0cec563157e415dd1d02228921a3fdf86500141d52"
       define_method(:install) do
         bin.install "ahasend"
         bash_completion.install "completions/ahasend.bash" => "ahasend"
@@ -48,8 +48,8 @@ class Ahasend < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.4.0/ahasend_0.4.0_linux_arm64.tar.gz"
-      sha256 "b0399347cd3fa6730ae939bf097a838a1fae0901101c1b3b624e4069172b77b3"
+      url "https://github.com/AhaSend/ahasend-cli/releases/download/v0.5.0/ahasend_0.5.0_linux_arm64.tar.gz"
+      sha256 "dee219e9c533b54c9996a545820f480441dd8ca47393db23790d9d53301849b5"
       define_method(:install) do
         bin.install "ahasend"
         bash_completion.install "completions/ahasend.bash" => "ahasend"
